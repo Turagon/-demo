@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="/stylesheets/persons.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="top">
+      <header>
+        <h4>SQL 討論一</h4>
+      </header>
+      <div class="and-demo-box">
+        <span>And Or條件</span>
+        <form action="/sort1" class="and-demo" method="POST">
+          <label for="#and-demo" class="sort-label"><i class="fas fa-venus-double"></i>性別</label>
+          <select name="gender" id="and-demo" class="sort-item">
+            <option value="All" {{#ifEqual 'All' gender}}selected{{/ifEqual}}>All</option>
+            <option value="M" {{#ifEqual 'M' gender}}selected{{/ifEqual}}>Male</option>
+            <option value="F" {{#ifEqual 'F' gender}}selected{{/ifEqual}}>Female</option>
+          </select>
+          <label for="#and-demo-age" class="sort-label"><i class="fas fa-baby-carriage"></i>年齡大於></label>
+          <select name="age" id="and-demo-age" class="sort-item">
+            <option value="0" {{#ifEqual 0 age}}selected{{/ifEqual}}> All</option>
+            <option value="10" {{#ifEqual 10 age}}selected{{/ifEqual}}> 10</option>
+            <option value="20" {{#ifEqual 20 age}}selected{{/ifEqual}}> 20</option>
+            <option value="30" {{#ifEqual 30 age}}selected{{/ifEqual}}> 30</option>
+            <option value="40" {{#ifEqual 40 age}}selected{{/ifEqual}}> 40</option>
+            <option value="50" {{#ifEqual 50 age}}selected{{/ifEqual}}> 50</option>
+          </select>
+          <button type="submit">搜尋</button>
+        </form>
+      </div>
+      <hr>
+      {{!-- <div class="or-demo-box">
+        <span>Or 條件</span>
+        <form action="/sort2" class="or-demo" method="POST">
+          <label for="#and-demo" class="sort-label"><i class="fas fa-venus-double"></i>性別</label>
+          <select name="gender" id="and-demo" class="sort-item">
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+          </select>
+          <label for="#and-demo-age" class="sort-label"><i class="fas fa-baby-carriage"></i>年齡大於</label>
+          <select name="low" id="and-demo-age" class="sort-item">
+            <option value="10"> 10</option>
+            <option value="20"> 20</option>
+            <option value="30"> 30</option>
+            <option value="40"> 40</option>
+            <option value="50"> 50</option>
+          </select>
+          <label for="#and-demo-age" class="sort-label"><i class="fas fa-baby-carriage"></i>年齡小於</label>
+          <select name="high" id="and-demo-age" class="sort-item">
+            <option value="10"> 10</option>
+            <option value="20"> 20</option>
+            <option value="30"> 30</option>
+            <option value="40"> 40</option>
+            <option value="50"> 50</option>
+          </select>
+          <button type="submit">搜尋</button>
+        </form>
+      </div>
+      <hr>
+      <form action="/sort" class="and-or-demo" method="POST">
+      </form> --}}
+    </div>
+    <div class="middle">
+      {{{body}}}
+    </div>
+  </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
